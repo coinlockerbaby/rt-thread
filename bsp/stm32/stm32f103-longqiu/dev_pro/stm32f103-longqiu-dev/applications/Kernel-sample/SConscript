@@ -2,15 +2,15 @@ from building import *
 import os
 
 cwd = GetCurrentDir()
+src = []
 
-src = Glob('main.c')
 # 根据Kconfig配置情况来添加源文件
-if GetDepend(['USING_MOTOR_SAMPLE']):
-    src += Glob('Motor_thread.c')
+if GetDepend(['USING_KERNEL_SAMPLE']):
+    src += Glob('*.c')
 
 CPPPATH = [cwd]
 
-group = DefineGroup('Applications', src, depend = [''], CPPPATH = CPPPATH)
+group = DefineGroup('Kernel_Sample', src, depend = [''], CPPPATH = CPPPATH)
 
 list = os.listdir(cwd)
 for item in list:

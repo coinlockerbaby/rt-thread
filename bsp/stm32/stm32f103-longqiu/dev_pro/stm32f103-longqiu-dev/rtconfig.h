@@ -89,6 +89,7 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_PWM
 
 /* Using USB */
 
@@ -118,6 +119,19 @@
 
 /* Utilities */
 
+#define RT_USING_ULOG
+#define ULOG_OUTPUT_LVL_D
+#define ULOG_OUTPUT_LVL 7
+#define ULOG_ASSERT_ENABLE
+#define ULOG_LINE_BUF_SIZE 128
+
+/* log format */
+
+#define ULOG_USING_COLOR
+#define ULOG_OUTPUT_TIME
+#define ULOG_OUTPUT_LEVEL
+#define ULOG_OUTPUT_TAG
+#define ULOG_BACKEND_USING_CONSOLE
 
 /* RT-Thread online packages */
 
@@ -244,6 +258,9 @@
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32F1
 
+/* Applications Config */
+
+
 /* Hardware Drivers Config */
 
 #define SOC_STM32F103ZE
@@ -256,6 +273,7 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART1
+#define BSP_USING_UART2
 
 /* Board extended module Drivers */
 

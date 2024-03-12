@@ -1,0 +1,10 @@
+menu "Applications Config"
+
+config USING_KERNEL_SAMPLE
+            bool "Enable Kernel Sample"
+            default n
+config USING_MOTOR_SAMPLE
+            bool "Enable Motor Sample"
+            default n
+
+endmenu
