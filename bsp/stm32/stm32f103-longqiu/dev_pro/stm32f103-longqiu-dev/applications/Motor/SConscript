@@ -1,0 +1,24 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = []
+
+# 根据Kconfig配置情况来添加源文件
+if GetDepend(['USING_MOTOR_SPTA']):
+    src += Glob('*.c')
+    SrcRemove(src, ['Motor_sample.c'])
+# 根据Kconfig配置情况来添加源文件
+if GetDepend(['USING_MOTOR_SAMPLE']):
+    src += Glob('Motor_sample.c')
+
+CPPPATH = [cwd]
+
+group = DefineGroup('Motor', src, depend = [''], CPPPATH = CPPPATH)
+
+list = os.listdir(cwd)
+for item in list:
+    if os.path.isfile(os.path.join(cwd, item, 'SConscript')):
+        group = group + SConscript(os.path.join(item, 'SConscript'))
+
+Return('group')
