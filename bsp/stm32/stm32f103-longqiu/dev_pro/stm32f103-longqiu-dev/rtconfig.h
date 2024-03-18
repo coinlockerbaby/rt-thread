@@ -88,6 +88,7 @@
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_HWTIMER
 #define RT_USING_PIN
 #define RT_USING_PWM
 
@@ -220,6 +221,8 @@
 
 /* entertainment: terminal games and other interesting software packages */
 
+#define PKG_USING_UPACKER
+#define PKG_USING_UPACKER_LATEST_VERSION
 
 /* Arduino libraries */
 
@@ -258,8 +261,14 @@
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32F1
 
+/* Robot Config */
+
 /* Applications Config */
 
+
+/* Robot Drivers */
+
+#define BSP_USING_MOTOR
 
 /* Hardware Drivers Config */
 
@@ -274,6 +283,11 @@
 #define BSP_USING_UART
 #define BSP_USING_UART1
 #define BSP_USING_UART2
+#define BSP_USING_TIM
+#define BSP_USING_TIM2
+#define BSP_USING_TIM4
+#define BSP_USING_TIM5
+#define BSP_USING_TIM6
 
 /* Board extended module Drivers */
 

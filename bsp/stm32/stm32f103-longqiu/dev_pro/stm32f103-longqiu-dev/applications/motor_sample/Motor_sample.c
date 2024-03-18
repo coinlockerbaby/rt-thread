@@ -12,7 +12,7 @@
 #include "board.h"
 #include "stdlib.h"
 
-#define PULSE_PER_R     200
+#define PULSE_PER_R     1600
 
 #define MOTOR1_EN_PIN     GET_PIN(G, 10)
 #define MOTOR1_DIR_PIN    GET_PIN(G, 9)

@@ -4,6 +4,7 @@
 
 #define LOG_TAG "Flose"
 #include <ulog.h>
+#include "Motor_APP.h"
 
 #define LED0_PIN    GET_PIN(B, 12)
 
@@ -29,7 +30,12 @@ int main(void)
 #ifdef BSP_USING_KEY
     LOG_W("BSP_USING_KEY");
 #endif
-
+#ifdef BSP_USING_TIM
+    LOG_W("BSP_USING_TIM");
+#endif
+#ifdef BSP_USING_MOTOR
+    LOG_W("BSP_USING_MOTOR");
+#endif
     while (count++)
     {
         rt_pin_write(LED0_PIN, PIN_HIGH);

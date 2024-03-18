@@ -5,13 +5,12 @@ cwd = GetCurrentDir()
 src = []
 
 # 根据Kconfig配置情况来添加源文件
-if GetDepend(['BSP_USING_MOTOR']):
+if GetDepend(['USING_DEVICE_SAMPLE']):
     src += Glob('*.c')
-
 
 CPPPATH = [cwd]
 
-group = DefineGroup('Motor', src, depend = [''], CPPPATH = CPPPATH)
+group = DefineGroup('Device_Sample', src, depend = [''], CPPPATH = CPPPATH)
 
 list = os.listdir(cwd)
 for item in list:

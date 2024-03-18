@@ -1,16 +1,24 @@
-menu "Applications Config"
+menu "Robot Config"
 
-config USING_KERNEL_SAMPLE
-            bool "Enable Kernel Sample"
-            default n
-config USING_DEVICE_SAMPLE
-            bool "Enable Device Sample"
-            default n
-config USING_MOTOR_SAMPLE
-            bool "Enable Motor Sample"
-            default n
-config USING_MOTOR_SPTA
-            bool "Enable Motor SPTA"
-            default n
+menu "Applications Config"
+    config USING_KERNEL_SAMPLE
+        bool "Enable Kernel Sample"
+        default n
+    config USING_DEVICE_SAMPLE
+        bool "Enable Device Sample"
+        default n
+    config USING_MOTOR_SAMPLE
+        bool "Enable Motor Sample"
+        default n
+    config USING_MOTOR_SPTA
+        bool "Enable Motor SPTA"
+        default n
+endmenu
+
+menu "Robot Drivers"
+    config BSP_USING_MOTOR
+    bool "Enable Motor Driver"
+    default n
+endmenu
 
 endmenu

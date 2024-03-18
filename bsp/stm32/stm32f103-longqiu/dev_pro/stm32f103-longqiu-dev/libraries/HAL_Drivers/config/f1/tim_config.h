@@ -71,6 +71,17 @@ extern "C" {
 #endif /* TIM5_CONFIG */
 #endif /* BSP_USING_TIM5 */
 
+#ifdef BSP_USING_TIM6
+#ifndef TIM6_CONFIG
+#define TIM6_CONFIG                             \
+    {                                           \
+       .tim_handle.Instance     = TIM6,         \
+       .tim_irqn                = TIM6_IRQn,    \
+       .name                    = "timer6",     \
+    }
+#endif /* TIM6_CONFIG */
+#endif /* BSP_USING_TIM6 */
+
 #ifdef __cplusplus
 }
 #endif

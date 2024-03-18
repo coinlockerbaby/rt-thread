@@ -3,10 +3,8 @@ import os
 
 cwd = GetCurrentDir()
 
-src = Glob('main.c')
-# 根据Kconfig配置情况来添加源文件
-if GetDepend(['USING_MOTOR_SAMPLE']):
-    src += Glob('Motor_thread.c')
+src = Glob('*.c')
+
 
 CPPPATH = [cwd]
 
